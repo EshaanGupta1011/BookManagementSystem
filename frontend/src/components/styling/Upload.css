@@ -1,0 +1,98 @@
+.upload-container {
+  max-width: 600px;
+  margin: 2rem auto; /* Centers horizontally */
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.6s ease-out;
+  text-align: center; /* Centers text content */
+  color: var(--text-light);
+}
+
+.upload-container h2 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: var(--text-light);
+}
+
+.upload-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+
+.upload-form label {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--accent-color);
+}
+
+.upload-form input[type="text"],
+.upload-form input[type="number"] {
+  width: 100%;
+  max-width: 300px; /* Limits width for better centering */
+  padding: 0.75rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  color: var(--text-light);
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.upload-form input[type="text"]:focus,
+.upload-form input[type="number"]:focus {
+  border-color: var(--primary-color);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.upload-form .file-input {
+  position: relative;
+  width: 100%;
+  max-width: 400px; /* Slightly wider for file input */
+  border: 2px dashed rgba(255, 255, 255, 0.2);
+  padding: 2rem;
+  text-align: center;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-light);
+}
+
+.upload-form .file-input:hover {
+  border-color: var(--primary-color);
+  background: rgba(37, 99, 235, 0.05);
+}
+
+.upload-form input[type="file"] {
+  width: 100%;
+  padding: 0.5rem 0; /* Adjusted padding for file input */
+  color: var(--text-light);
+  opacity: 0.9;
+}
+
+.upload-form button {
+  width: 100%;
+  max-width: 200px; /* Limits width for better centering */
+  padding: 0.75rem;
+  font-size: 1rem;
+  font-weight: 500;
+  background: linear-gradient(
+    45deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  color: var(--text-light);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.upload-form button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(37, 99, 235, 0.4);
+}

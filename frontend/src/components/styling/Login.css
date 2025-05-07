@@ -1,0 +1,166 @@
+/* Hero section with gradient background */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background: linear-gradient(135deg, #1e3c72, #2a5298); */
+  color: var(--text-light);
+}
+
+/* Flex container for description and login form */
+.welcome-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* Styling for descriptive content */
+.description {
+  flex: 1;
+  padding-right: 2rem;
+  animation: slideInLeft 0.8s ease-out;
+}
+
+.description h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.description p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.description ul {
+  list-style: none;
+  padding: 0;
+}
+
+.description li {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.login-container {
+  flex: 1;
+  max-width: 400px;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  animation: slideInRight 0.8s ease-out;
+  text-align: center;
+  color: var(--text-light);
+}
+
+.login-container h2 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: var(--text-light);
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.login-form label {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--accent-color);
+}
+
+.login-form input {
+  width: 100%;
+  max-width: 300px;
+  padding: 0.75rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  color: var(--text-light);
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.login-form input:focus {
+  border-color: var(--primary-color);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.login-form button {
+  width: 100%;
+  max-width: 200px;
+  padding: 0.75rem;
+  font-size: 1rem;
+  font-weight: 500;
+  background: linear-gradient(
+    45deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  color: var(--text-light);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.login-form button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(37, 99, 235, 0.4);
+}
+
+/* Animations */
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .welcome-container {
+    flex-direction: column;
+  }
+  .description {
+    padding-right: 0;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  .login-container {
+    max-width: 100%;
+  }
+}
+
+.text-align-center {
+  text-align: center;
+  font-size: 16px;
+  color: #fafafa;
+  padding: 0px 0px 32px 0px;
+}
